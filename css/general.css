@@ -30,7 +30,7 @@ Default: 1
 -Greys: #555 #333
 
 ---SHADOWS
----BORDER RADIUS: 9px
+---BORDER RADIUS: 9px 11px;
 ---WHITESPACE
 -Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
@@ -96,7 +96,7 @@ body {
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .btn-full:link,
@@ -138,4 +138,7 @@ body {
 }
 .grid--center-v {
   align-items: center;
+}
+strong {
+  font-weight: 500;
 }
