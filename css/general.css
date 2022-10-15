@@ -145,13 +145,18 @@ body {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
-  grid-template-columns: 1fr 1fr;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 .grid--2cols {
   grid-template-columns: repeat(2, 1fr);
 }
 .grid--3cols {
   grid-template-columns: repeat(3, 1fr);
+}
+.grid--4cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 .grid--center-v {
   align-items: center;

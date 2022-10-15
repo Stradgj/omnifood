@@ -199,7 +199,7 @@
 .tag--paleo {
   background-color: #ffd43b;
 }
-.meal-tittle {
+.meal-title {
   font-size: 2.4rem;
   color: #333;
   font-weight: 600;
@@ -242,10 +242,7 @@
   grid-template-columns: 55fr 45fr;
   align-items: center;
 }
-.grid {
-}
-.grid--2cols {
-}
+
 .testimonials-container {
   padding: 9.6rem;
 }
@@ -255,8 +252,7 @@
   row-gap: 4.8rem;
   column-gap: 8rem;
 }
-.testimonial {
-}
+
 .testimonial-img {
   width: 6.4rem;
   border-radius: 50%;
@@ -297,15 +293,34 @@
   margin-bottom: 4.8rem;
 }
 .pricing-plan {
-  background-color: #fdf2e9;
   border-radius: 11px;
-  padding: 4.8rem;
+
   width: 75%;
 }
 .pricing-plan--starter {
   justify-self: end;
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
 }
-.pricing-plan--starter {
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.pricing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  color: #333;
+  transform: rotate(45deg);
+
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 .plan-name {
   color: #cf711f;
@@ -334,4 +349,30 @@
 .plan-sign-up {
   text-align: center;
   margin-top: 4.8rem;
+}
+
+.feature {
+}
+.feature-icon {
+  color: #e67e22;
+  font-size: 3.2rem;
+  background-color: #fdf2e9;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+.feature-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
 }
