@@ -27,6 +27,8 @@ allLinks.forEach((link) =>
         behavior: "smooth",
       });
     }
+    if (link.classList.contains("main-nav__link"))
+      header.classList.toggle("nav-open");
   })
 );
 
