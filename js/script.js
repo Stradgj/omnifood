@@ -31,7 +31,25 @@ allLinks.forEach((link) =>
       header.classList.toggle("nav-open");
   })
 );
+// sticky nav
+const bodyEl = document.querySelector("body");
+const sectionHeroEL = document.querySelector(".hero__section");
 
+const observer = new IntersectionObserver(
+  function (ent) {
+    if (!ent[0].isIntersecting) {
+      bodyEl.classList.add("sticky-nav");
+    } else {
+      bodyEl.classList.remove("sticky-nav");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+observer.observe(sectionHeroEL);
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 checkFlexGap = function () {
@@ -46,7 +64,6 @@ checkFlexGap = function () {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 };
